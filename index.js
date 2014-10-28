@@ -28,9 +28,10 @@ function extractGlossary (word) {
     if(!normalized) return null;
     
     var candidates = Normalizer.removeJosa(normalized);
-    candidates.push(word);
-    candidates.push(normalized);
-    candidates.sort(function (a, b) { return b.length - a.length; });
+    if(candidates.indexOf(word) < 0) candidates.push(word);
+    if(candidates.indexOf(normalized) < 0) candidates.push(normalized);
+    
+    candidates.sort(function (a, b) { return hangul.disassemble(b).length - hangul.disassemble(a).length; });
     
     for(var i=0; i<candidates.length; i++) {
         if(Db.isInBacklist(candidates[i])) {
