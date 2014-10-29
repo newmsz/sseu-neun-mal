@@ -41,6 +41,8 @@ function extractGlossary (word) {
     }
 
     for(var i=0; i<candidates.length; i++) {
+        if(candidates[i].match(/^[0-9\s]$/)) return null;
+        
         if(!Normalizer.isKorean(candidates[i])) {
             if(__verbose) console.log('VERBOSE: non-Korean: ' + normalized);
             return candidates[i];
