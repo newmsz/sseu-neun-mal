@@ -4,7 +4,7 @@
   "description": "Korean term extraction module for nodejs 한국어 용언(쓰는 말) 추출기",
   "main": "index.js",
   "scripts": {
-    "test": "test/test.js"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,6 @@
   "homepage": "https://github.com/newmsz/sseu-neun-mal",
   "dependencies": {
     "hangul-js": "0.1.x",
-    "unicode-7.0.0": "x"
+    "unicode-8.0.0": "x"
   }
 }
