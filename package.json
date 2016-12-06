@@ -1,6 +1,6 @@
 {
   "name": "sseu-neun-mal",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Korean term extraction module for nodejs 한국어 용언(쓰는 말) 추출기",
   "main": "index.js",
   "scripts": {
